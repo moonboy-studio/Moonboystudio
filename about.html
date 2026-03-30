@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.sidebar { transform: translateX(-100%); transition: 0.3s; }
+.sidebar.open { transform: translateX(0); }
+</style>
+</head>
+
+<body class="bg-black text-white">
+
+<div class="flex justify-between p-4 border-b border-gray-800">
+  <h1>Moonboy Studio</h1>
+  <button onclick="toggleMenu()">☰</button>
+</div>
+
+<div id="sidebar" class="sidebar fixed top-0 left-0 h-full w-64 bg-gray-900 p-6">
+  <button onclick="toggleMenu()">Close ✕</button>
+  <nav class="flex flex-col space-y-4 mt-6">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="team.html">Team</a>
+  </nav>
+</div>
+
+<section class="p-10 max-w-3xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6">About Us</h2>
+
+  <h3>Mission</h3>
+  <p class="text-gray-400">Provide high-quality digital services.</p>
+
+  <h3 class="mt-6">Vision</h3>
+  <p class="text-gray-400">Become a top gaming agency.</p>
+
+  <h3 class="mt-6">History</h3>
+  <p class="text-gray-400">
+    2025 - Started by Moonboy alone<br>
+    2026 - Built tournament site, Yone joined
+  </p>
+</section>
+
+<script>
+function toggleMenu(){
+  document.getElementById("sidebar").classList.toggle("open")
+}
+</script>
+
+</body>
+</html>
